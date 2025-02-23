@@ -4,106 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
-        }
-
-        .sidebar {
-            width: 25%;
-            background-color: #123b64;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 10px 0 10px rgba(7, 131, 232, 0.1);
-            height: 100vh;
-            overflow-y: auto;
-        }
-
-        .sidebar img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .sidebar h1 {
-            font-size: 24px;
-            margin: 10px 0;
-            color: #e6d3d3;
-        }
-
-        .sidebar p {
-            color: #e6d3d3;
-            font-size: 14px;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 10px 0;
-        }
-
-        .sidebar ul li a {
-            text-decoration: none;
-            color: #abc9ea;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .sidebar ul li a:hover {
-            color: #063a7190;
-        }
-
-        .main {
-            width: 50%;
-            padding: 210px;
-            text-align: center;
+            flex-direction: column;
+            align-items: center;
             position: relative;
-            overflow-y: auto;
             background-image: linear-gradient(135deg, #e0f7fa 25%, transparent 25%, transparent 20%, #e0f7fa 50%, #e0f7fa 55%, transparent 55%, transparent);
             background-size: 40px 40px; /* Mengatur ukuran pola */
         }
 
+        /* Profile Section */
+        .profile {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: white;
+            padding: 12px 16px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 220px;
+        }
+
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 8px;
+        }
+
+        .profile h1 {
+            font-size: 18px;
+            margin: 0;
+            color: #123b64;
+        }
+
+        /* Skill Section */
+        .skills {
+            margin-top: 6px;
+        }
+
+        .skills h2 {
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #123b64;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills ul li {
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        /* Menu Icon */
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #123b64;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Navigation Menu */
+        nav {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #123b64;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav ul li:last-child {
+            border-bottom: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #abc9ea;
+        }
+
+        .show-menu {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Main Content */
+        .main {
+            text-align: center;
+            padding: 100px 20px;
+        }
 
         .main h1 {
-            font-size: 48px;
-            margin: 0;
+            font-size: 32px;
         }
 
         .main p {
             font-size: 18px;
-            color: #000000;
-            margin: 20px 0 40px;
         }
 
-        .main button {
-            padding: 10px 20px;
+        .main img {
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        /* Button */
+        .portfolio-button {
+            margin-top: 20px;
+            padding: 12px 24px;
             font-size: 16px;
             color: #fff;
             background-color: #123b64;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            transition: background 0.3s;
         }
 
-        .main button:hover {
+        .portfolio-button:hover {
             background-color: #1071da;
         }
 
-        .main img {
-            position: absolute;
-            top: 50%;
-            left: 70%;
-            transform: translateY(-50%);
-            max-height: 90%;
-            max-width: 50%;
-            object-fit: cover;
-        }
+        /* Footer */
         .footer {
             width: 100%;
             background-color: #29639e;
@@ -114,154 +176,142 @@
             bottom: 0;
             left: 0;
             box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-    }
+        }
 
         .footer p {
             margin: 0;
             font-size: 14px;
-    }
+        }
 
         .footer a {
             color: #abc9ea;
             text-decoration: none;
             transition: 0.3s;
-    }
+        }
 
         .footer a:hover {
             color: #0e2236;
-    }
+        }
 
-    @media screen and (max-width: 1024px) {
-        .sidebar {
-        width: 30%;
-    }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile {
+                position: relative;
+                width: 90%;
+                max-width: 280px;
+                margin: 20px auto;
+                text-align: center;
+            }
 
-        .main {
-        width: 70%;
-        padding: 100px 20px;
-    }
+            .profile img {
+                width: 60px;
+                height: 60px;
+            }
 
-        .main img {
-        display: none; /* Sembunyikan gambar agar tidak menumpuk di layar kecil */
-    }
-}
+            .profile h1 {
+                font-size: 20px;
+            }
 
-    @media screen and (max-width: 768px) {
-        .body {
-        flex-direction: column;
-        text-align: center;
-    }
+            .skills h2 {
+                font-size: 16px;
+            }
 
-        .sidebar {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        box-shadow: none;
-    }
+            .skills ul li {
+                font-size: 14px;
+            }
 
-        .sidebar img {
-        width: 80px;
-        height: 80px;
-    }
+            .menu-icon {
+                font-size: 24px;
+            }
 
-        .sidebar h1 {
-        font-size: 20px;
-    }
+            .main {
+                padding: 60px 20px;
+            }
 
-        .sidebar p {
-        font-size: 12px;
-    }
+            .main h1 {
+                font-size: 24px;
+            }
 
-        .sidebar ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 0;
-    }
+            .main p {
+                font-size: 14px;
+            }
 
-        .sidebar ul li {
-        margin: 5px 10px;
-    }
+            .main img {
+                width: 90%;
+                max-width: 300px;
+            }
 
-        .main {
-        width: 100%;
-        padding: 50px 20px;
-    }
+            .portfolio-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
 
-        .main h1 {
-        font-size: 32px;
-    }
-
-        .main p {
-        font-size: 14px;
-    }
-
-        .main button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
-
-    @media screen and (max-width: 480px) {
-        .sidebar img {
-        width: 60px;
-        height: 60px;
-    }
-
-        .sidebar h1 {
-        font-size: 18px;
-    }
-
-        .sidebar p {
-        font-size: 10px;
-    }
-
-        .main h1 {
-        font-size: 24px;
-    }
-
-        .main p {
-        font-size: 12px;
-    }
-
-        .main button {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
-
-        .footer {
-        font-size: 12px;
-        padding: 10px 0;
-    }
-}
-
+            .footer {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="sidebar">
+
+    <!-- Profile Section -->
+    <div class="profile">
         <img src="regy.jpg" alt="Profile Picture">
         <h1>Reggy Helva Rezal</h1>
-        <p>UI/UX Designer | Desain Grafis | Database administrator</p>
+        
+        <!-- Skills Section -->
+        <div class="skills">
+            <h2>Keterampilan:</h2>
+            <ul>
+                <li>UI/UX Design</li>
+                <li>Graphic Design</li>
+                <li>Adobe Illustrator</li>
+                <li>Figma</li>
+                <li>HTML & CSS</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id="menu">
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about_me.html">About</a></li>
             <li><a href="skil.html">Skills</a></li>
             <li><a href="edu.html">Education</a></li>
             <li><a href="experience.html">Experience</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </div>
+    </nav>
+
+    <!-- Main Content -->
     <div class="main">
         <h1>I am a Designer</h1>
         <p>Menciptakan Desain yang Kreatif dan Inovatif</p>
-        <a href="portofolio.html" target="_blank" style="text-decoration: none;">
-            <button>View Portfolio</button>
-        </a>
         
+        <!-- Image -->
         <img src="DSC00759.png" alt="Designer Image">
+        
+        <!-- Button moved below image -->
+        <a href="portofolio.html" target="_blank" class="portfolio-button">View Portfolio</a>
     </div>
+
+    <!-- Footer -->
     <div class="footer">
-        <p>&copy; 2024 Reggy Helva Rezal. All rights reserved. </p>
+        <p>&copy; 2024 Reggy Helva Rezal. All rights reserved.</p>
     </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show-menu");
+        }
+    </script>
+
 </body>
 </html>
