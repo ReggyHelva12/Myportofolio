@@ -130,6 +130,111 @@
         .footer a:hover {
             color: #0e2236;
     }
+
+    @media screen and (max-width: 1024px) {
+        .sidebar {
+        width: 30%;
+    }
+
+        .main {
+        width: 70%;
+        padding: 100px 20px;
+    }
+
+        .main img {
+        display: none; /* Sembunyikan gambar agar tidak menumpuk di layar kecil */
+    }
+}
+
+    @media screen and (max-width: 768px) {
+        .body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+        .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+        .sidebar img {
+        width: 80px;
+        height: 80px;
+    }
+
+        .sidebar h1 {
+        font-size: 20px;
+    }
+
+        .sidebar p {
+        font-size: 12px;
+    }
+
+        .sidebar ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+        .sidebar ul li {
+        margin: 5px 10px;
+    }
+
+        .main {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+        .main h1 {
+        font-size: 32px;
+    }
+
+        .main p {
+        font-size: 14px;
+    }
+
+        .main button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+    @media screen and (max-width: 480px) {
+        .sidebar img {
+        width: 60px;
+        height: 60px;
+    }
+
+        .sidebar h1 {
+        font-size: 18px;
+    }
+
+        .sidebar p {
+        font-size: 10px;
+    }
+
+        .main h1 {
+        font-size: 24px;
+    }
+
+        .main p {
+        font-size: 12px;
+    }
+
+        .main button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+        .footer {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -138,7 +243,7 @@
         <h1>Reggy Helva Rezal</h1>
         <p>UI/UX Designer | Desain Grafis | Database administrator</p>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="about_me.html">About</a></li>
             <li><a href="skil.html">Skills</a></li>
             <li><a href="edu.html">Education</a></li>
