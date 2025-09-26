@@ -145,24 +145,30 @@
             margin-top: 20px;
         }
 
-        /* Button */
-        .portfolio-button {
-            margin-top: 20px;
-            padding: 12px 24px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #123b64;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            display: inline-block;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
+        .button-group {
+    display: flex;
+    gap: 20px; /* jarak antar tombol */
+    margin-top: 20px;
+    justify-content: center; /* biar posisinya tetap di tengah */
+}
 
-        .portfolio-button:hover {
-            background-color: #1071da;
-        }
+.portfolio-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #123b64;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.portfolio-button:hover {
+    background-color: #1071da;
+}
+
 
         /* Footer */
         .footer {
@@ -286,11 +292,11 @@
         <!-- Image -->
             <img src="DSC00759.png" alt="Designer Image">
     
-        <!-- Button Portfolio -->
-            <a href="portofolio.html" target="_blank" class="portfolio-button">View Portfolio</a>
-
-        <!-- Button Sertifikat -->
-            <a href="sertifikat.html" target="_blank" class="portfolio-button">View Certificates</a>
+            <!-- Container tombol -->
+            <div class="button-group">
+                <a href="portofolio.html" target="_blank" class="portfolio-button">View Portfolio</a>
+                <a href="sertifikat.html" target="_blank" class="portfolio-button">View Certificates</a>
+            </div>
     </div>
 
     <!-- Footer -->
