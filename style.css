@@ -43,6 +43,12 @@ nav ul li a {
     font-weight: 500;
 }
 
+.menu-toggle{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
 .btn-primary {
     background: #a4161a;
     color: white;
@@ -561,11 +567,28 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* ============================= */
-/* RESPONSIVE TABLET */
-/* ============================= */
+/* ========================= */
+/* DESKTOP BESAR */
+/* ========================= */
 
-@media (max-width: 992px){
+@media (max-width:1200px){
+
+.hero{
+padding:60px;
+}
+
+.hero-image img{
+width:320px;
+}
+
+}
+
+
+/* ========================= */
+/* LAPTOP */
+/* ========================= */
+
+@media (max-width:992px){
 
 header{
 padding:20px 40px;
@@ -574,6 +597,7 @@ padding:20px 40px;
 .hero{
 flex-direction:column;
 text-align:center;
+padding:60px 40px;
 }
 
 .hero-text{
@@ -581,88 +605,8 @@ max-width:100%;
 }
 
 .hero-image img{
-width:300px;
+width:280px;
 margin-top:30px;
-}
-
-.about-section{
-flex-direction:column;
-text-align:center;
-}
-
-.project-container{
-grid-template-columns:repeat(2,1fr);
-}
-
-.certificate-container{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-
-/* ============================= */
-/* RESPONSIVE MOBILE */
-/* ============================= */
-
-/* HAMBURGER MENU */
-
-.menu-toggle{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
-
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px;
-}
-
-.hero-text{
-max-width:600px;
-}
-
-.hero-image img{
-width:350px;
-}
-
-.mobile-photo{
-display:none;
-}
-
-
-/* RESPONSIVE HP */
-
-@media (max-width:768px){
-
-.hero{
-flex-direction:column;
-text-align:center;
-padding:40px 20px;
-}
-
-.desktop-photo{
-display:none;
-}
-
-.mobile-photo{
-display:block;
-margin:20px 0;
-}
-
-.mobile-photo img{
-width:200px;
-border-radius:50%;
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
 }
 
 .icons{
@@ -671,27 +615,136 @@ justify-content:center;
 
 }
 
-/* ============================= */
-/* EXTRA SMALL DEVICE */
-/* ============================= */
 
-@media (max-width:480px){
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width:768px){
+
+header{
+padding:15px 25px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+display:none;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+nav.active{
+display:block;
+}
+
+nav ul{
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+nav ul li{
+margin:15px 0;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:40px 20px;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+.hero-text h2{
+font-size:20px;
+}
+
+.hero-image img{
+width:230px;
+margin:20px auto;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.icons{
+justify-content:center;
+}
+
+}
+
+
+/* ========================= */
+/* HP BESAR */
+/* ========================= */
+
+@media (max-width:576px){
 
 .hero-text h1{
 font-size:26px;
 }
 
-.section-title{
-font-size:28px;
-}
-
-.project-info h3{
+.hero-text h2{
 font-size:18px;
 }
 
-.btn-primary{
-padding:8px 15px;
+.hero-text p{
 font-size:14px;
+line-height:1.6;
+}
+
+.btn-primary,
+.btn-outline{
+padding:10px 16px;
+font-size:14px;
+}
+
+.hero-image img{
+width:200px;
+}
+
+.icons a{
+width:40px;
+height:40px;
+font-size:18px;
+}
+
+}
+
+
+/* ========================= */
+/* HP SANGAT KECIL */
+/* ========================= */
+
+@media (max-width:400px){
+
+.hero-text h1{
+font-size:22px;
+}
+
+.hero-text h2{
+font-size:16px;
+}
+
+.hero-text p{
+font-size:13px;
+}
+
+.hero-image img{
+width:180px;
 }
 
 }
