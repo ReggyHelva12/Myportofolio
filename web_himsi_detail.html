@@ -11,20 +11,21 @@
 
 <!-- NAVBAR -->
 <header>
-    <div class="logo">R</div>
+        <div class="logo">R</div>
+            <div class="menu-toggle" id="menu-toggle">
+            ☰
+            </div>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-                <li><a href="about.html">Tentang Saya</a></li>
-                <li><a href="project.html">Portofolio</a></li>
-                <li><a href="education.html">Pendidikan</a></li>
-                <li><a href="experience.html">Pengalaman</a></li>
-                <li><a href="certificate.html">Sertifikat</a></li>
-        </ul>
-    </nav>
-
-    <a href="https://drive.google.com/file/d/1656v4zVjHoGVXdgJvAp3JWubxeVXFCPa/view?usp=sharing" class="btn-primary">Download CV</a>
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="about.html">Tentang Saya</a></li>
+                        <li><a href="project.html">Portofolio</a></li>
+                        <li><a href="education.html">Pendidikan</a></li>
+                        <li><a href="experience.html">Pengalaman</a></li>
+                        <li><a href="certificate.html">Sertifikat</a></li>
+                    </ul>
+                </nav>
 </header>
 
 
@@ -49,6 +50,15 @@ Website HIMSI merupakan website yang dirancang sebagai media branding organisasi
 </div>
 
 </section>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("nav-menu");
+
+        toggle.onclick = function(){
+        menu.classList.toggle("active");
+        }
+    </script>
 
 </body>
+
 </html>
