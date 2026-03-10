@@ -605,64 +605,71 @@ grid-template-columns:repeat(2,1fr);
 /* RESPONSIVE MOBILE */
 /* ============================= */
 
-@media (max-width: 768px){
+/* HAMBURGER MENU */
 
-header{
-flex-direction:column;
-gap:15px;
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
 }
 
-nav ul{
-flex-direction:column;
-gap:10px;
-}
 
 .hero{
-padding:40px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px;
 }
 
-.hero-text h1{
-font-size:32px;
-}
-
-.hero-text h2{
-font-size:22px;
+.hero-text{
+max-width:600px;
 }
 
 .hero-image img{
-width:250px;
+width:350px;
 }
 
-.about-section{
+.mobile-photo{
+display:none;
+}
+
+
+/* RESPONSIVE HP */
+
+@media (max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
 padding:40px 20px;
 }
 
-.skills-section{
-padding:40px 20px;
+.desktop-photo{
+display:none;
 }
 
-.project-section{
-padding:40px 20px;
+.mobile-photo{
+display:block;
+margin:20px 0;
 }
 
-.certificate-section{
-padding:40px 20px;
+.mobile-photo img{
+width:200px;
+border-radius:50%;
 }
 
-.project-container{
-grid-template-columns:1fr;
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
 }
 
-.certificate-container{
-grid-template-columns:1fr;
-}
-
-.project-gallery{
-grid-template-columns:1fr;
+.icons{
+justify-content:center;
 }
 
 }
-
 
 /* ============================= */
 /* EXTRA SMALL DEVICE */
