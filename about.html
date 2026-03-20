@@ -9,59 +9,60 @@
 <body>
 
 <header>
-        <div class="logo">R</div>
-            <div class="menu-toggle" id="menu-toggle">
-            ☰
-            </div>
+    <div class="logo">R</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-                <nav id="nav-menu">
-                    <ul>
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="about.html">Tentang Saya</a></li>
-                        <li><a href="project.html">Portofolio</a></li>
-                        <li><a href="education.html">Pendidikan</a></li>
-                        <li><a href="experience.html">Pengalaman</a></li>
-                        <li><a href="certificate.html">Sertifikat</a></li>
-                    </ul>
-                </nav>
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang Saya</a></li>
+            <li><a href="project.html">Portofolio</a></li>
+            <li><a href="education.html">Pendidikan</a></li>
+            <li><a href="experience.html">Pengalaman</a></li>
+            <li><a href="certificate.html">Sertifikat</a></li>
+        </ul>
+    </nav>
 </header>
 
 <!-- ABOUT SECTION 1 -->
 <section class="about-section">
-    <div class="about-text">
-        <h1>Tentang Saya</h1>
-        <p>
-            Saya adalah seorang Mahasiswa di Universitas Bina Sarana Informatika Jurusan Sistem Informasi.
-            Saya memiliki ketertarikan dalam bidang UI/UX Designer dan Data Analyst yang fokus 
-            menciptakan pengalaman digital yang modern, intuitif, dan berbasis data.
-        </p>
-    </div>
-    <div class="about-image">
-        <img src="reggy1.jpeg" alt="About Image">
+    <div class="about-container">
+        <div class="about-text">
+            <h1>Tentang Saya</h1>
+            <p>
+                Saya adalah seorang Mahasiswa di Universitas Bina Sarana Informatika Jurusan Sistem Informasi.
+                Saya memiliki ketertarikan dalam bidang UI/UX Designer dan Data Analyst yang fokus
+                menciptakan pengalaman digital yang modern, intuitif, dan berbasis data.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="reggy1.jpeg" alt="About Image">
+        </div>
     </div>
 </section>
 
 <!-- ABOUT SECTION 2 -->
 <section class="about-section reverse">
-    <div class="about-image">
-        <img src="data.jpg" alt="data Image">
-    </div>
-    <div class="about-text">
-        <h2>Ketertarikan</h2>
-        <p>
-            Saya memiliki ketertarikan pada bagaimana desain dan data dapat bekerja bersama untuk menciptakan pengalaman digital yang efektif dan bermakna. 
-            Berawal dari minat dalam memahami perilaku pengguna,saya mengembangkan kemampuan di bidang UI/UX Design sekaligus analisis data untuk 
-            menghasilkan solusi yang tidak hanya menarik secara visual, tetapi juga berbasis insight dan kebutuhan nyata pengguna.
-        </p>
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Ketertarikan</h2>
+            <p>
+                Saya memiliki ketertarikan pada bagaimana desain dan data dapat bekerja bersama untuk menciptakan pengalaman digital yang efektif dan bermakna.
+                Berawal dari minat dalam memahami perilaku pengguna, saya mengembangkan kemampuan di bidang UI/UX Design sekaligus analisis data untuk
+                menghasilkan solusi yang tidak hanya menarik secara visual, tetapi juga berbasis insight dan kebutuhan nyata pengguna.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="data.jpg" alt="Data Image">
+        </div>
     </div>
 </section>
 
+<!-- SKILLS -->
 <section class="skills-section">
-
     <h2 class="section-title">Keahlian Utama</h2>
 
     <div class="skills-table">
-
         <table>
             <thead>
                 <tr>
@@ -69,9 +70,7 @@
                     <th>Keahlian</th>
                 </tr>
             </thead>
-
             <tbody>
-
                 <tr>
                     <td class="category">🎨 UI/UX Design</td>
                     <td>
@@ -79,7 +78,6 @@
                         Usability Testing, Figma.
                     </td>
                 </tr>
-
                 <tr>
                     <td class="category">📊 Data Analyst</td>
                     <td>
@@ -87,24 +85,19 @@
                         Microsoft Excel, Dashboarding, Power BI.
                     </td>
                 </tr>
-
             </tbody>
-
         </table>
-
     </div>
-
 </section>
 
-    <script>
-        const toggle = document.getElementById("menu-toggle");
-        const menu = document.getElementById("nav-menu");
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("nav-menu");
 
-        toggle.onclick = function(){
+    toggle.onclick = function () {
         menu.classList.toggle("active");
-        }
-    </script>
+    }
+</script>
 
 </body>
-
 </html>
