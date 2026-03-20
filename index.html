@@ -5,79 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Reggy Helva Rezal</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <header>
         <div class="logo">R</div>
-            <div class="menu-toggle" id="menu-toggle">
-            ☰
-            </div>
 
-                <nav id="nav-menu">
-                    <ul>
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="about.html">Tentang Saya</a></li>
-                        <li><a href="project.html">Portofolio</a></li>
-                        <li><a href="education.html">Pendidikan</a></li>
-                        <li><a href="experience.html">Pengalaman</a></li>
-                        <li><a href="certificate.html">Sertifikat</a></li>
-                    </ul>
-                </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="project.html">Portofolio</a></li>
+                <li><a href="education.html">Pendidikan</a></li>
+                <li><a href="experience.html">Pengalaman</a></li>
+                <li><a href="certificate.html">Sertifikat</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero">
+        <div class="hero-text">
+            <h1>Hallo Semua,<br><span>saya Reggy Helva Rezal</span></h1>
+            <h2>UI/UX Designer | Data Analyst</h2>
+            <p>
+                Portofolio ini menampilkan beberapa proyek dan kontribusi saya
+                yang pernah dijalani dalam bidang teknologi.
+            </p>
 
-    <div class="hero-text">
+            <div class="hero-buttons">
+                <a href="https://drive.google.com/file/d/1656v4zVjHoGVXdgJvAp3JWubxeVXFCPa/view?usp=sharing" class="btn-primary" target="_blank">Download CV</a>
+                <a href="https://wa.me/628979278342" class="btn-outline" target="_blank">Hubungi Saya</a>
+            </div>
 
-        <h1>
-            Hallo Semua,<br>
-            <span>saya Reggy Helva Rezal</span>
-        </h1>
-
-        <div class="hero-image mobile-photo">
-            <img src="reggy.png" alt="Foto Reggy">
-        </div>
-
-        <h2>UI/UX Designer | Data Analyst</h2>
-
-        <p>
-            Portofolio ini menampilkan beberapa proyek dan kontribusi saya
-            yang pernah dijalani dalam bidang teknologi.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="https://drive.google.com/file/d/1656v4zVjHoGVXdgJvAp3JWubxeVXFCPa/view?usp=sharing" class="btn-primary">Download CV</a>
-            <a href="https://wa.me/628979278342" class="btn-outline">Hubungi Saya</a>
-        </div>
-
-        <div class="social">
-            <p>Social Media</p>
-
-            <div class="icons">
-                <a href="https://instagram.com/revazall28_"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/reggy-helva-rezal-a693512a7/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://wa.me/628979278342"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://github.com/ReggyHelva12"><i class="fab fa-github"></i></a>
+            <div class="social">
+                <p>Social Media</p>
+                <div class="icons">
+                    <a href="https://instagram.com/revazall28_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/reggy-helva-rezal-a693512a7/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/628979278342" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://github.com/ReggyHelva12" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
         </div>
 
-    </div>
-
-
-</section>
+        <div class="hero-image">
+            <img src="reggy.png" alt="Foto Reggy Helva Rezal">
+        </div>
+    </section>
 
     <script>
         const toggle = document.getElementById("menu-toggle");
         const menu = document.getElementById("nav-menu");
 
-        toggle.onclick = function(){
-        menu.classList.toggle("active");
-        }
+        toggle.addEventListener("click", function () {
+            menu.classList.toggle("active");
+        });
     </script>
 
 </body>
