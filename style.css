@@ -151,6 +151,7 @@ nav ul li a:hover {
     }
 }
 
+
 .hero-text p {
     font-size: 22px;
     line-height: 1.8;
@@ -642,36 +643,48 @@ background:#7f0f14;
 /* PROJECT DETAIL */
 
 .project-detail{
-padding:80px;
-text-align:center;
-background:#f8f8f8;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* INI YANG BIKIN KE TENGAH */
+    text-align: center;
 }
 
+/* JUDUL */
+.project-detail .section-title{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* DESKRIPSI */
 .project-desc{
-max-width:700px;
-margin:auto;
-margin-bottom:40px;
-color:#555;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #666;
+    line-height: 1.7;
 }
 
 /* GALLERY */
-
 .project-gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-content: center;
 }
 
+/* GAMBAR */
 .project-gallery img{
-width:100%;
-border-radius:10px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-transition:0.3s;
+    width: 100%;
+    max-width: 350px; /* biar nggak terlalu besar */
+    margin: 0 auto;   /* center */
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
+/* HOVER EFFECT */
 .project-gallery img:hover{
-transform:scale(1.05);
+    transform: scale(1.05);
 }
 
 /* TABLET */
