@@ -151,12 +151,6 @@ nav ul li a:hover {
     }
 }
 
-@keyframes lineGrow{
-    to{
-        width: 60%;
-    }
-}
-
 .hero-text p {
     font-size: 22px;
     line-height: 1.8;
