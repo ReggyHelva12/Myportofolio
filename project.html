@@ -1,182 +1,267 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Project</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <header>
-        <div class="logo">R</div>
-            <div class="menu-toggle" id="menu-toggle">
-            ☰
-            </div>
 
-                <nav id="nav-menu">
-                    <ul>
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="about.html">Tentang Saya</a></li>
-                        <li><a href="project.html">Portofolio</a></li>
-                        <li><a href="education.html">Pendidikan</a></li>
-                        <li><a href="experience.html">Pengalaman</a></li>
-                        <li><a href="certificate.html">Sertifikat</a></li>
-                    </ul>
-                </nav>
+    <div class="logo">R</div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang Saya</a></li>
+            <li><a href="project.html" class="active">Portofolio</a></li>
+            <li><a href="education.html">Pendidikan</a></li>
+            <li><a href="experience.html">Pengalaman</a></li>
+            <li><a href="certificate.html">Sertifikat</a></li>
+        </ul>
+    </nav>
+
 </header>
 
+<!-- ================= PROJECT ================= -->
 
-<!-- PROJECT SECTION -->
 <section class="project-section">
 
-<h1 class="section-title">Portfolio Project</h1>
+    <h1 class="section-title">Portfolio Project</h1>
 
-<div class="project-container">
+    <!-- FILTER -->
+    <div class="filter-container">
 
-    <!-- PROJECT 1 -->
-    <div class="project-card">
+        <button class="filter-btn active" data-filter="all">
+            Semua
+        </button>
 
-        <img src="whisker.png" alt="Project UI UX">
+        <button class="filter-btn" data-filter="uiux">
+            UI/UX Design
+        </button>
 
-        <div class="project-info">
-            <h3>Mobile Apps Whisker Wonderland</h3>
-            <p>Grooming & Toko kebutuhan hewan Peliharaan.</p>
+        <button class="filter-btn" data-filter="data">
+            Data Analyst
+        </button>
 
-            <div class="project-button">
-                <a href="whisker_detail.html">Detail</a>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!-- PROJECT 2 -->
-    <div class="project-card">
-
-        <img src="Runix.png" alt="Project Dashboard">
-
-        <div class="project-info">
-            <h3>Mobile Apps Runix </h3>
-            <p>Tracking Olahraga Lari & Event Lari</p>
-
-            <div class="project-button">
-                <a href="Runix_detail.html">Detail</a>
-            </div>
-        </div>
+        <button class="filter-btn" data-filter="database">
+            Database Administrator
+        </button>
 
     </div>
 
+    <div class="project-container">
 
-    <!-- PROJECT 3 -->
-    <div class="project-card">
+        <!-- ================= UI UX ================= -->
 
-        <img src="himsikcm.png" alt="Website himsi">
+        <div class="project-card" data-category="uiux">
 
-        <div class="project-info">
-            <h3>Website Himsi Cutmutia X Kalimalang</h3>
-            <p>Website Company Profile Himsi </p>
+            <img src="whisker.png" alt="Whisker">
 
-            <div class="project-button">
-                <a href="web_himsi_detail.html">Detail</a>
+            <div class="project-info">
+
+                <h3>Mobile Apps Whisker Wonderland</h3>
+
+                <p>UI/UX aplikasi grooming & toko kebutuhan hewan.</p>
+
+                <div class="project-button">
+                    <a href="whisker_detail.html">Detail</a>
+                </div>
+
             </div>
+
+        </div>
+
+        <div class="project-card" data-category="uiux">
+
+            <img src="Runix.png" alt="Runix">
+
+            <div class="project-info">
+
+                <h3>Mobile Apps Runix</h3>
+
+                <p>Tracking olahraga lari dan event lari.</p>
+
+                <div class="project-button">
+                    <a href="Runix_detail.html">Detail</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="project-card" data-category="uiux">
+
+            <img src="daur cuan.png" alt="Daur Cuan">
+
+            <div class="project-info">
+
+                <h3>Mobile Apps Daur Cuan</h3>
+
+                <p>Bank Sampah Digital.</p>
+
+                <div class="project-button">
+                    <a href="Daur_cuan_detail.html">Detail</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="project-card" data-category="uiux">
+
+            <img src="logo_collabify.png" alt="Collabify">
+
+            <div class="project-info">
+
+                <h3>Mobile Apps Collabify</h3>
+
+                <p>Platform pencarian magang & tenaga kerja.</p>
+
+                <div class="project-button">
+                    <a href="collabify_detail.html">Detail</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="project-card" data-category="uiux">
+
+            <img src="logo_emopals.png" alt="Emopals">
+
+            <div class="project-info">
+
+                <h3>Mobile Apps Emopals</h3>
+
+                <p>Aplikasi edukasi pengenalan emosi anak.</p>
+
+                <div class="project-button">
+                    <a href="emopals_detail.html">Detail</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= DATA ANALYST ================= -->
+
+        <div class="project-card" data-category="data">
+
+            <img src="BootcampDA1.png" alt="Bootcamp">
+
+            <div class="project-info">
+
+                <h3>Bootcamp Data Analyst 2026</h3>
+
+                <p>Analisis tren pengangguran berdasarkan lulusan pendidikan.</p>
+
+                <div class="project-button">
+                    <a href="BootcampDA_detail.html">Detail</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="project-card" data-category="data">
+
+            <img src="diabetes.png" alt="Diabetes">
+
+            <div class="project-info">
+
+                <h3>Analisa Risiko Diabetes</h3>
+
+                <p>Prediksi risiko diabetes menggunakan Decision Tree (C4.5).</p>
+
+                <div class="project-button">
+                    <a href="ProjectTeamDA_detail.html">Detail</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= DATABASE ================= -->
+
+        <div class="project-card" data-category="database">
+
+            <img src="himsikcm.png" alt="Website HIMSI">
+
+            <div class="project-info">
+
+                <h3>Website HIMSI Cut Meutia X Kalimalang</h3>
+
+                <p>Perancangan database dan pengembangan website company profile.</p>
+
+                <div class="project-button">
+                    <a href="web_himsi_detail.html">Detail</a>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
-
-    <!-- PROJECT 4 -->
-    <div class="project-card">
-
-        <img src="daur cuan.png" alt="Aplikasi Daur Cuan">
-
-        <div class="project-info">
-            <h3>Mobile Apps Daur Cuan</h3>
-            <p>Bank Sampah Digital </p>
-
-            <div class="project-button">
-                <a href="Daur_cuan_detail.html">Detail</a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- PROJECT 5 -->
-    <div class="project-card">
-
-        <img src="logo_collabify.png" alt="Aplikasi Collabify">
-
-        <div class="project-info">
-            <h3>Mobile Apps Collabify</h3>
-            <p>Jobstreet Magang & Pencarian Tenaga Kerja </p>
-
-            <div class="project-button">
-                <a href="collabify_detail.html">Detail</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- PROJECT 6 -->
-    <div class="project-card">
-
-        <img src="logo_emopals.png" alt="Aplikasi emopals">
-
-        <div class="project-info">
-            <h3>Mobile Apps Emopals</h3>
-            <p>Teman bermain anak mengenal emosi </p>
-
-            <div class="project-button">
-                <a href="emopals_detail.html">Detail</a>
-            </div>
-        </div>
-    </div>
-
-     <!-- PROJECT 7 -->
-    <div class="project-card">
-
-        <img src="BootcampDA1.png" alt="">
-
-        <div class="project-info">
-            <h3>Bootcamp Data Analyst 2026</h3>
-            <p>Pola & tren Pengangguran berdasarkan lulusan pendidikan di Indonesia </p>
-
-            <div class="project-button">
-                <a href="BootcampDA_detail.html">Detail</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- PROJECT 7 -->
-    <div class="project-card">
-
-        <img src="diabetes.png" alt="">
-
-        <div class="project-info">
-            <h3>Project Team Analist Data </h3>
-            <p>Analisa resiko penyakit diabetes menggunakan algoritma C4.5 </p>
-
-            <div class="project-button">
-                <a href="ProjectTeamDA_detail.html">Detail</a>
-            </div>
-        </div>
-    </div>
-
-
-</div>
 
 </section>
 
-    
-    <script>
-        const toggle = document.getElementById("menu-toggle");
-        const menu = document.getElementById("nav-menu");
+<script>
 
-        toggle.onclick = function(){
-        menu.classList.toggle("active");
-        }
-    </script>
+// ================= MENU =================
+
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+toggle.onclick = function () {
+    menu.classList.toggle("active");
+};
+
+// ================= FILTER =================
+
+const filterBtns = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterBtns.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        filterBtns.forEach(button => button.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        projectCards.forEach(card => {
+
+            if (filter === "all") {
+
+                card.style.display = "block";
+
+            } else if (card.dataset.category === filter) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
 
 </body>
-
 </html>
