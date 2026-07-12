@@ -640,6 +640,43 @@ background:#7f0f14;
     background: #8f0d15;
 }
 
+.category-title{
+    max-width:1200px;
+    margin:60px auto 30px;
+    font-size:32px;
+    font-weight:700;
+    color:#b5121b;
+    border-left:6px solid #b5121b;
+    padding-left:18px;
+}
+
+.filter-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin:30px 0 50px;
+}
+
+.filter-btn{
+    padding:12px 24px;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    color:#222;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:500;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#b5121b;
+    color:#fff;
+}
+
 /* PROJECT DETAIL */
 
 .project-detail{
